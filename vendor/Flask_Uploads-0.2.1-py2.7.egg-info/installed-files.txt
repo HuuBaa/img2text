@@ -1,9 +1,0 @@
-..\flask_uploads.py
-..\flask_uploads.pyc
-dependency_links.txt
-not-zip-safe
-PKG-INFO
-requires.txt
-SOURCES.txt
-top_level.txt
-version_info.json

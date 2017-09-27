@@ -1,0 +1,53 @@
+{% extends "bootstrap/base.html" %} {% import "bootstrap/wtf.html" as wtf %} {% block head%} {{super()}}
+<style>
+#txtpre {
+    font-size: 8pt;
+    letter-spacing: 4px;
+    line-height: 8pt;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+}
+
+#imgform {
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+#imgdiv {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+#txtsdiv {
+    margin-top: 20px;
+}
+#arrow{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+</style>
+{% endblock %} {% block title%} IMG2TXT {% endblock %} {% block content%}
+<div class="container-fluid">
+    <div class="row">
+        <div id="imgform" class="col-md-4">
+            {{ wtf.quick_form(form)}}
+        </div>
+        <div id="imgdiv" class="col-md-6 col-md-offset-2 hidden-xs">
+            
+            <img src="http://wxhuu-wxhuu.stor.sinaapp.com/ascii_dora.png" width=240 height=240>
+            <span id= "arrow" class="glyphicon glyphicon-arrow-right "></span>
+            <img src="http://wxhuu-wxhuu.stor.sinaapp.com/X%25DRGWZGO%603G09%25%5D0%40%7DJ%7B8F.png" width=240 height=240>
+        </div>
+    </div>
+</div>
+<br>
+<br> {% if txts%}
+<div id="txtsdiv">
+    <pre id="txtpre">{{txts}}</pre>
+</div>
+{% endif %} {% endblock %}
